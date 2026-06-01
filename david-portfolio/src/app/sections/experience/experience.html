@@ -1,0 +1,79 @@
+<section id="experience" class="bg-slate-900 px-6 py-24 text-white">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-14 text-center">
+      <span
+        class="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300"
+      >
+        EXPERIENCIA
+      </span>
+
+      <h2 class="mt-5 text-4xl font-bold tracking-tight md:text-5xl">
+        Experiencia Profesional
+      </h2>
+
+      <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+        Trayectoria profesional en desarrollo Full Stack, automatización,
+        gestión de datos y soluciones empresariales.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      @for (experience of experiences; track experience.id) {
+        <article
+          class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/10"
+        >
+          <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-white">
+                {{ experience.role }}
+              </h3>
+
+              <p class="mt-1 text-cyan-400">
+                {{ experience.company }}
+              </p>
+
+              <p class="mt-2 text-sm text-slate-400">
+                {{ experience.startDate }} - {{ experience.endDate }}
+                ·
+                {{ experience.modality }}
+              </p>
+            </div>
+
+            @if (experience.current) {
+              <span
+                class="w-fit rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-sm font-medium text-emerald-300"
+              >
+                Actual
+              </span>
+            } @else {
+              <span
+                class="w-fit rounded-full border border-slate-500/30 bg-slate-500/10 px-3 py-1 text-sm font-medium text-slate-300"
+              >
+                Finalizado
+              </span>
+            }
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            @for (tech of experience.technologies; track tech) {
+              <span
+                class="rounded-lg border border-slate-700 bg-slate-800/70 px-3 py-1 text-xs text-slate-300"
+              >
+                {{ tech }}
+              </span>
+            }
+          </div>
+
+          <ul class="mt-6 grid gap-3 text-slate-300 md:grid-cols-2">
+            @for (item of experience.responsibilities; track item) {
+              <li class="flex gap-3 leading-7">
+                <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
+                <span>{{ item }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>
