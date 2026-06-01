@@ -1,0 +1,59 @@
+<section class="min-h-screen bg-slate-950 text-white px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      <span
+        class="inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-300"
+      >
+        {{ profile.availability }}
+      </span>
+
+      <h1 class="mt-8 text-5xl font-bold tracking-tight md:text-7xl">
+        Hola, soy
+        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+          {{ profile.name }}
+        </span>
+      </h1>
+
+      <h2 class="mt-4 text-2xl font-semibold text-cyan-400 md:text-3xl">
+        {{ profile.role }}
+      </h2>
+
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+        {{ profile.description }}
+      </p>
+
+      <p class="mt-4 text-sm text-slate-400">
+        📍 {{ profile.location }}
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a
+          [href]="profile.primaryCta.url"
+          class="rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 font-semibold text-white transition hover:scale-105"
+        >
+          {{ profile.primaryCta.label }}
+        </a>
+
+        <a
+          [href]="profile.secondaryCta.url"
+          class="rounded-xl border border-slate-700 px-6 py-3 font-semibold text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300"
+        >
+          {{ profile.secondaryCta.label }}
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-16 grid gap-6 border-t border-slate-800 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+      @for (stat of stats; track stat.id) {
+        <div>
+          <p class="text-3xl font-bold text-cyan-400">
+            {{ stat.value }}
+          </p>
+          <p class="mt-2 text-sm text-slate-400">
+            {{ stat.label }}
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
