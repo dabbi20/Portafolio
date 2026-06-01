@@ -6,14 +6,14 @@ export const PROFILE: Profile = {
   role: 'Full Stack Developer',
 
   headline:
-    'Systems Engineer building scalable applications, automation solutions and cloud-enabled platforms.',
+    'Ingeniero de Sistemas especializado en desarrollo backend, automatización y aplicaciones web escalables.',
 
   description:
-    'Systems Engineer and Full Stack Developer with experience in Java, Node.js, databases, cloud services, automation and modern web technologies. Passionate about backend development, software architecture and scalable systems.',
+    'Ingeniero de Sistemas y Full Stack Developer con experiencia en Java, Spring Boot, Node.js, Angular, automatización con n8n, bases de datos SQL y NoSQL, integración de APIs REST y servicios cloud. Apasionado por el desarrollo backend, la arquitectura de software y la construcción de soluciones escalables.',
 
   location: 'Bogotá, Colombia',
 
-  availability: 'Open to opportunities',
+  availability: 'Disponible para oportunidades',
 
   primaryCta: {
     label: 'Ver Proyectos',
