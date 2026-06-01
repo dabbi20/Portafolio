@@ -5,14 +5,28 @@ export interface Project {
   categories: string[];
   technologies: string[];
   status: ProjectStatus;
-  githubUrl?: string;
-  demoUrl?: string;
+  links: ProjectLink[];
   imageUrl?: string;
+  year?: number;
   featured: boolean;
 }
+
+export interface ProjectLink {
+  label: string;
+  url: string;
+  type: ProjectLinkType;
+}
+
+export type ProjectLinkType =
+  | 'github'
+  | 'frontend'
+  | 'backend'
+  | 'demo'
+  | 'video';
 
 export type ProjectStatus =
   | 'production'
   | 'completed'
   | 'in-progress'
-  | 'practice';
+  | 'practice'
+  | 'archived';
