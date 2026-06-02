@@ -7,11 +7,13 @@
     class="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 px-5 py-3 shadow-2xl shadow-black/20 backdrop-blur-xl"
   >
     <a href="#hero" class="flex items-center gap-3">
-    <span
-  class="logo-glow flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 font-bold text-white shadow-lg shadow-cyan-500/20"
->
-  D
-</span>
+<img
+  [src]="themeService.theme() === 'dark'
+    ? '/assets/logos/logo-square-dark.png'
+    : '/assets/logos/logo-square-light.png'"
+  alt="Logo David Carrasco"
+  class="logo-glow h-10 w-10 rounded-xl object-contain"
+/>
 
       <span class="text-base font-bold tracking-wide text-white">
         David<span class="text-cyan-400">.</span>
