@@ -1,4 +1,4 @@
-<section id="skills" class="bg-slate-900 px-6 py-24 text-white">
+<section id="skills" class="section-secondary px-6 py-24">
   <div class="mx-auto max-w-6xl">
     <div class="mb-14 text-center">
       <span
@@ -11,7 +11,7 @@
         Habilidades Técnicas
       </h2>
 
-      <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+      <p class="mx-auto mt-4 max-w-2xl text-muted">
         Stack tecnológico orientado al desarrollo Full Stack, backend, automatización,
         bases de datos y servicios cloud.
       </p>
@@ -20,13 +20,13 @@
     <div class="grid gap-6 md:grid-cols-2">
       @for (group of skillGroups; track group.id) {
         <article
-          class="rounded-2xl border border-slate-800 bg-slate-950/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/10"
+          class="section-card rounded-2xl border p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/10"
         >
           <h3 class="text-2xl font-bold">
             {{ group.title }}
           </h3>
 
-          <p class="mt-2 text-sm leading-6 text-slate-400">
+          <p class="mt-2 text-sm leading-6 text-muted">
             {{ group.description }}
           </p>
 
