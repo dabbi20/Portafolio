@@ -7,6 +7,8 @@ import { Skills } from './sections/skills/skills';
 import { Education } from './sections/education/education';
 import { Contact } from './sections/contact/contact';
 import { Navbar } from './sections/navbar/navbar';
+import { Footer } from './sections/footer/footer';
+import { ScrollTop } from './shared/components/scroll-top/scroll-top';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +20,9 @@ import { Navbar } from './sections/navbar/navbar';
   Projects,
   Skills,
   Education,
-  Contact
+  Contact,
+  Footer,
+  ScrollTop
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'
