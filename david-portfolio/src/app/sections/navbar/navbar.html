@@ -14,7 +14,9 @@
       </span>
     </a>
 
-    <div class="hidden items-center rounded-xl border border-white/10 bg-white/5 p-1 md:flex">
+    <div
+      class="hidden items-center rounded-xl border border-white/10 bg-white/5 p-1 md:flex"
+    >
       @for (item of navigation; track item.url) {
         <a
           [href]="item.url"
@@ -25,11 +27,26 @@
       }
     </div>
 
-    <a
-      href="#contact"
-      class="hidden rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:scale-105 md:inline-flex"
-    >
-      Hablemos
-    </a>
+    <div class="flex items-center gap-3">
+      <button
+        type="button"
+        (click)="toggleTheme()"
+        class="hidden h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-white transition hover:bg-white/10 md:inline-flex"
+        aria-label="Cambiar tema"
+      >
+        @if (themeService.theme() === 'dark') {
+          ☀️
+        } @else {
+          🌙
+        }
+      </button>
+
+      <a
+        href="#contact"
+        class="hidden rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:scale-105 md:inline-flex"
+      >
+        Hablemos
+      </a>
+    </div>
   </nav>
 </header>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NAVIGATION } from '../../data/navigation/navigation.data';
+import { ThemeService } from '../../core/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,4 +11,10 @@ import { NAVIGATION } from '../../data/navigation/navigation.data';
 })
 export class Navbar {
   navigation = NAVIGATION;
+
+  constructor(public themeService: ThemeService) {}
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
+  }
 }

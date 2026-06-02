@@ -1,7 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
 @import 'aos/dist/aos.css';
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+  background-color: #020617;
+  color: #ffffff;
+}
+
+html.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+.hero-section {
+  background-color: #020617;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.light .hero-section {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+html.light {
+  background-color: #f8fafc;
+}
+
+html.dark {
+  background-color: #020617;
+}
+html.light .hero-section p {
+  color: #475569;
+}
+
+html.light .hero-section .text-slate-300,
+html.light .hero-section .text-slate-400 {
+  color: #475569;
+}
+
+html.light .hero-section a {
+  color: inherit;
+}
+
+html.light .hero-section a.border {
+  border-color: #94a3b8;
+  color: #0f172a;
 }
