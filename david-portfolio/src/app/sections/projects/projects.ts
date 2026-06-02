@@ -4,6 +4,7 @@ import { CATEGORIES } from '../../data/categories/categories.data';
 
 @Component({
   selector: 'app-projects',
+  standalone: true,
   imports: [],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
