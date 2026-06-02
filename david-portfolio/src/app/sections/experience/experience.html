@@ -1,4 +1,4 @@
-<section id="experience" class="bg-slate-900 px-6 py-24 text-white">
+<section id="experience" class="section-secondary px-6 py-24">
   <div class="mx-auto max-w-6xl">
     <div class="mb-14 text-center">
       <span
@@ -11,7 +11,7 @@
         Experiencia Profesional
       </h2>
 
-      <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+     <p class="mx-auto mt-4 max-w-2xl text-muted">
         Trayectoria profesional en desarrollo Full Stack, automatización,
         gestión de datos y soluciones empresariales.
       </p>
@@ -20,8 +20,8 @@
     <div class="space-y-8">
       @for (experience of experiences; track experience.id) {
         <article
-          class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/10"
-        >
+  class="section-card group rounded-2xl border p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/10"
+>
           <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div>
               <h3 class="text-2xl font-bold text-white">
@@ -64,7 +64,7 @@
             }
           </div>
 
-          <ul class="mt-6 grid gap-3 text-slate-300 md:grid-cols-2">
+          <ul class="mt-6 grid gap-3 text-muted md:grid-cols-2">
             @for (item of experience.responsibilities; track item) {
               <li class="flex gap-3 leading-7">
                 <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
