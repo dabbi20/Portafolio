@@ -1,0 +1,114 @@
+<section id="contact" class="bg-slate-900 px-6 py-24 text-white">
+  <div class="mx-auto max-w-4xl">
+
+    <div class="text-center">
+
+      <span
+        class="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300"
+      >
+        CONTACTO
+      </span>
+
+      <h2 class="mt-5 text-4xl font-bold md:text-5xl">
+        {{ contact.title }}
+      </h2>
+
+      <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-400">
+        {{ contact.description }}
+      </p>
+
+    </div>
+
+    <div
+      class="mt-14 rounded-3xl border border-slate-800 bg-slate-950/70 p-8"
+    >
+
+      <div class="grid gap-6 md:grid-cols-2">
+
+        <div>
+
+          <p class="text-sm uppercase tracking-widest text-slate-500">
+            Email
+          </p>
+
+          <a
+            [href]="'mailto:' + contact.email"
+            class="mt-2 block text-lg text-cyan-400 hover:text-cyan-300"
+          >
+            {{ contact.email }}
+          </a>
+
+        </div>
+
+        <div>
+
+          <p class="text-sm uppercase tracking-widest text-slate-500">
+            Ubicación
+          </p>
+
+          <p class="mt-2 text-lg text-slate-300">
+            {{ contact.location }}
+          </p>
+
+        </div>
+
+        <div>
+
+          <p class="text-sm uppercase tracking-widest text-slate-500">
+            GitHub
+          </p>
+
+          <a
+            [href]="contact.github"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 block text-lg text-cyan-400 hover:text-cyan-300"
+          >
+            Ver perfil
+          </a>
+
+        </div>
+
+        <div>
+
+          <p class="text-sm uppercase tracking-widest text-slate-500">
+            LinkedIn
+          </p>
+
+          <a
+            [href]="contact.linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 block text-lg text-cyan-400 hover:text-cyan-300"
+          >
+            Conectar
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+
+        <a
+          [href]="contact.cv"
+          target="_blank"
+          class="rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 font-semibold text-white transition hover:scale-105"
+        >
+          Descargar CV
+        </a>
+
+        <a
+          [href]="contact.linkedin"
+          target="_blank"
+          class="rounded-xl border border-slate-700 px-6 py-3 font-semibold text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300"
+        >
+          Contactar por LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

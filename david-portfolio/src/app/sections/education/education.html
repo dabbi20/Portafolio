@@ -1,0 +1,140 @@
+<section id="education" class="bg-slate-950 px-6 py-24 text-white">
+  <div class="mx-auto max-w-6xl">
+
+    <div class="mb-14 text-center">
+
+      <span
+        class="inline-flex rounded-full border border-violet-400/30 bg-violet-400/10 px-4 py-2 text-sm font-semibold text-violet-300"
+      >
+        EDUCACIÓN
+      </span>
+
+      <h2 class="mt-5 text-4xl font-bold md:text-5xl">
+        Formación Académica
+      </h2>
+
+      <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+        Formación profesional, especialización y certificaciones relacionadas con
+        desarrollo de software, arquitectura de aplicaciones, bases de datos y tecnologías cloud.
+      </p>
+
+    </div>
+
+    <div class="grid gap-10 lg:grid-cols-2">
+
+      <!-- EDUCACIÓN -->
+
+      <div>
+
+        <h3 class="mb-6 text-2xl font-bold">
+          Educación
+        </h3>
+
+        <div class="space-y-6">
+
+          @for (item of education; track item.id) {
+
+            <article
+              class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-300 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/10"
+            >
+
+              <div class="flex items-start justify-between gap-4">
+
+                <div>
+
+                  <h4 class="text-xl font-semibold">
+                    {{ item.title }}
+                  </h4>
+
+                  <p class="mt-2 text-cyan-400">
+                    {{ item.institution }}
+                  </p>
+
+                  <p class="mt-2 text-sm text-slate-400">
+                    {{ item.period }}
+                  </p>
+
+                </div>
+
+                @if (item.status === 'En curso') {
+
+                  <span
+                    class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300"
+                  >
+                    En curso
+                  </span>
+
+                } @else {
+
+                  <span
+                    class="rounded-full border border-slate-500/30 bg-slate-500/10 px-3 py-1 text-xs font-medium text-slate-300"
+                  >
+                    Finalizado
+                  </span>
+
+                }
+
+              </div>
+
+            </article>
+
+          }
+
+        </div>
+
+      </div>
+
+      <!-- CERTIFICACIONES -->
+
+      <div>
+
+        <h3 class="mb-6 text-2xl font-bold">
+          Certificaciones
+        </h3>
+
+        <div class="space-y-6">
+
+          @for (item of certifications; track item.id) {
+
+            <article
+              class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-300 hover:border-violet-400/40 hover:shadow-lg hover:shadow-violet-500/10"
+            >
+
+              <div class="flex items-start justify-between gap-4">
+
+                <div>
+
+                  <h4 class="text-lg font-semibold">
+                    {{ item.title }}
+                  </h4>
+
+                  <p class="mt-2 text-cyan-400">
+                    {{ item.institution }}
+                  </p>
+
+                  <p class="mt-2 text-sm text-slate-400">
+                    {{ item.period }}
+                  </p>
+
+                </div>
+
+                <span
+                  class="rounded-full border border-violet-400/30 bg-violet-400/10 px-3 py-1 text-xs font-medium text-violet-300"
+                >
+                  Certificación
+                </span>
+
+              </div>
+
+            </article>
+
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

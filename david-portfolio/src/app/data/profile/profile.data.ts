@@ -21,9 +21,9 @@ export const PROFILE: Profile = {
     type: 'primary',
   },
 
-  secondaryCta: {
-    label: 'Descargar CV',
-    url: '/assets/docs/cv-david-carrasco.pdf',
-    type: 'secondary',
-  },
+secondaryCta: {
+  label: 'Descargar CV',
+  url: '/assets/docs/cv-david-carrasco.pdf',
+  type: 'secondary',
+},
 };
