@@ -26,7 +26,11 @@ El portafolio cuenta con:
 
 ---
 
+<<<<<<< HEAD
 # 🛠️ Tecnologías Utilizadas
+=======
+#  Tecnologías Utilizadas
+>>>>>>> 9ae8c08 (prueba)
 
 ## Frontend
 
@@ -112,7 +116,14 @@ Información académica, certificaciones y formación continua.
 
 ---
 
+<<<<<<< HEAD
 #  Estructura del Proyecto
+=======
+# 
+
+
+  Estructura del Proyecto
+>>>>>>> 9ae8c08 (prueba)
 
 ```text
 src
@@ -213,6 +224,13 @@ Correo:
 
 ---
 
+<<<<<<< HEAD
 # 📄 Licencia
 
 Este proyecto fue desarrollado con fines profesionales y de presentación de portafolio.
+=======
+#  Licencia
+
+Este proyecto fue desarrollado con fines profesionales y de presentación de portafolio.
+
+>>>>>>> 9ae8c08 (prueba)
