@@ -92,3 +92,33 @@ html.light .section-card {
 html.light .text-muted {
   color: #475569;
 }
+
+.tech-badge {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+
+html.light .tech-badge {
+  background-color: #e2e8f0;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.logo-glow {
+  animation: floating 4s ease-in-out infinite;
+}
